@@ -1,6 +1,6 @@
 import {expect} from 'chai'
-import jsdom from 'jsdom'
-import fs from 'fs'
+// import jsdom from 'jsdom'
+// import fs from 'fs'
 
 describe('Index Test 1', () => {
   it('should pass', () => {

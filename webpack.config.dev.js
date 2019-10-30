@@ -42,9 +42,12 @@ module.exports = {
       // preload the jshint loader
       enforce: 'pre',
       // exclude any and all files in the node_modules folder
-      exclude: /node_modules/,
-      // USe the babel loader. With webpack 2.0.0, the -loader suffix is not allowed to be omitted
-      loaders: ['babel-loader']
+      exclude:  /(node_modules|bower_components)/,
+      // Use the babel loader. With webpack 2.0.0, the -loader suffix is not allowed to be omitted
+      loaders: 'babel-loader',
+      options: {
+          presets: ['@babel/preset-env'],
+        }
     },
     {
       // also, it is handling the .CSS files for us.
